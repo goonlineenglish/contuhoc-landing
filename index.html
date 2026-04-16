@@ -506,10 +506,10 @@
                         <input type="email" id="parentEmail" class="form-control" placeholder="Để nhận giáo án và tài liệu PDF..." required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="childName">Tên thường gọi của bé</label>
-                        <input type="text" id="childName" class="form-control" placeholder="Ví dụ: Thóc, Dâu Tây..." required>
+                        <label class="form-label" for="childName">Tên của bé</label>
+                        <input type="text" id="childName" class="form-control" placeholder="Ghi tên đầy đủ của bé..." required>
                     </div>
-                    <div class="form-group" style="margin-bottom: 32px;">
+                    <div class="form-group">
                         <label class="form-label" for="childAge">Bé năm nay mấy tuổi?</label>
                         <select id="childAge" class="form-control" required>
                             <option value="" disabled selected>Chọn độ tuổi của bé</option>
@@ -519,6 +519,10 @@
                             <option value="6">6 tuổi</option>
                             <option value="7">7 tuổi</option>
                         </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 32px;">
+                        <label class="form-label" for="familyArea">Địa chỉ nhà mình (để nhận bộ quà) 🎁</label>
+                        <input type="text" id="familyArea" class="form-control" placeholder="Ví dụ: 278C1 Tân Mai, p. Hoàng Mai, Hà Nội" required>
                     </div>
                     <button type="submit" id="submitBtn" class="btn btn-accent" style="width: 100%; padding: 20px 0; font-size: 18px; box-shadow: 0 0 30px rgba(245, 158, 11, 0.3);">
                         Hoàn Tất Đăng Ký Ngay
@@ -566,6 +570,7 @@
             formData.append('Email', document.getElementById('parentEmail').value);
             formData.append('Tên bé', document.getElementById('childName').value);
             formData.append('Tuổi bé', document.getElementById('childAge').value);
+            formData.append('Địa chỉ', document.getElementById('familyArea').value);
 
             fetch(WEBAPP_URL, { method: 'POST', body: formData })
             .then(function(res) { return res.json(); })
