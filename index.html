@@ -338,10 +338,10 @@
             .section-title { font-size: 2rem; }
             .hero-text h1 { font-size: 2.5rem; }
             
-            /* Xếp đè logo và dàn ngang 2 nút button trên Mobile */
-            .header-inner { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
-            .header-actions { flex-direction: row; justify-content: center; width: 100%; gap: 10px; }
-            .header-actions .btn { padding: 8px 12px !important; font-size: 12px !important; flex: 1; text-align: center; justify-content: center; }
+            /* Giữ logo và nút hiển thị ngang trên Mobile giống Desktop */
+            .header-inner { flex-direction: row; justify-content: space-between; gap: 8px; text-align: left; }
+            .header-actions { width: auto; justify-content: flex-end; gap: 8px; }
+            .header-actions .btn { padding: 8px 16px !important; font-size: 12px !important; flex: none; display: inline-flex; }
             .logo-text { font-size: 20px; }
             .logo-sub { font-size: 9px; }
             
@@ -369,7 +369,6 @@
             </div>
             <div class="header-actions">
                 <a href="#register-section" class="btn btn-primary">Đăng ký ngay</a>
-                <a href="https://zalo.me/g/rdmdzl104" target="_blank" class="btn btn-accent"><i style="font-style: normal; margin-right: 4px;">💬</i> Nhóm Zalo</a>
             </div>
         </div>
     </header>
@@ -381,7 +380,7 @@
                 <h1>15 Tuần <span class="text-gradient gradient-accent">Khơi Nguồn</span><br>Tiếng Anh Tự Nhiên</h1>
                 <p class="hero-desc">Hành trình 15 tuần vàng giúp con thẩm thấu ngôn ngữ tự nhiên. Nhẹ nhàng, không áp lực — chuẩn bị nền tảng vững chắc như cách Luna đã đồng hành cùng em bé Thóc.</p>
                 <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-                    <a href="https://zalo.me/g/rdmdzl104" target="_blank" class="btn btn-accent">Đăng ký tham gia (40 chỗ)</a>
+                    <a href="#register-section" class="btn btn-accent">Đăng ký tham gia (40 chỗ)</a>
                 </div>
             </div>
             <div class="hero-image-wrapper">
